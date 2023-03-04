@@ -6,7 +6,7 @@ defmodule Nostrum.Mixfile do
     [
       app: :nostrum,
       version: "0.6.1",
-      elixir: "~> 1.11",
+      elixir: "~> 1.14.0-rc.1",
       elixirc_paths: elixirc_paths(Mix.env()),
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
@@ -97,6 +97,7 @@ defmodule Nostrum.Mixfile do
   defp deps do
     [
       {:jason, "~> 1.2"},
+      {:cowlib, "~> 2.11", hex: :remedy_cowlib},
       {:gun, "== 2.0.1", hex: :remedy_gun},
       {:certifi, "~> 2.8"},
       {:kcl, "~> 1.4"},
